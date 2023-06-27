@@ -21,26 +21,26 @@ const navigation = [
 ];
 const solutions = [
   {
-    name: 'Inbox',
+    name: 'Programming',
     description:
       'Get a better understanding of where your traffic is coming from.',
     href: '#',
     icon: InboxIcon
   },
   {
-    name: 'Messaging',
+    name: 'Miscellaneous',
     description: 'Speak directly to your customers in a more meaningful way.',
     href: '#',
     icon: ChatBubbleBottomCenterTextIcon
   },
   {
-    name: 'Live Chat',
+    name: 'Puns',
     description: "Your customers' data will be safe and secure.",
     href: '#',
     icon: ChatBubbleLeftRightIcon
   },
   {
-    name: 'Knowledge Base',
+    name: 'Spooky',
     description: "Connect with third-party tools that you're already using.",
     href: '#',
     icon: QuestionMarkCircleIcon

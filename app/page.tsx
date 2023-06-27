@@ -1,4 +1,5 @@
 import { Joke } from '@/types/Jokes';
+import Nav from './components/Nav';
 
 async function getJokes() {
   const res = await fetch('https://v2.jokeapi.dev/joke/Any');
@@ -13,6 +14,7 @@ export default async function Home() {
   console.log(joke);
   return (
     <div className="test">
+      <Nav />
       <h1>I live!!!!</h1>
       {joke.type === 'twopart' ? (
         <div>
