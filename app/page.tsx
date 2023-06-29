@@ -1,28 +1,19 @@
-import { Joke } from '@/types/Jokes';
-import Nav from './components/Nav';
-
-async function getJokes() {
-  const res = await fetch('https://v2.jokeapi.dev/joke/Any');
-  if (!res.ok) {
-    throw new Error('failed to get jokes');
-  }
-  return res.json();
-}
+'use client';
+import Hero from './components/Hero';
+import Quote from './components/Quote';
+import Tiles from './components/Tiles';
+import CTA from './components/CTA';
+import { getJokes } from '@/utils/getJoke';
+import { Categories } from '@/types/Categories';
 
 export default async function Home() {
-  const joke = (await getJokes()) as Joke;
-  console.log(joke);
+  const categories = ['Programming', 'Miscellaneous', 'Pun', 'Spooky'];
   return (
     <div className="test">
-      <Nav />
-      <h1>I live!!!!</h1>
-      {joke.type === 'twopart' ? (
-        <div>
-          {joke.setup} - {joke.delivery}
-        </div>
-      ) : (
-        <p>One part</p>
-      )}
+      <Hero />
+      <Quote />
+      <Tiles categories={categories} />
+      <CTA />
     </div>
   );
 }
